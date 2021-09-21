@@ -4,27 +4,32 @@
 	    <meta charset="utf-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://kit.fontawesome.com/16c7ddff84.js" crossorigin="anonymous"></script>
-	    <link rel="stylesheet" href="public/main.css" />
+	    <link rel="stylesheet" href="public/css/main.css" />
         <title>Oh My Food</title>
 	    <meta name="description" content="Reservez le menu qui vous convient" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div id="logo_header">
-                <img src="images/logo/ohmyfood@2x.svg" alt="logo" />    
+                <img src="images/logo/ohmyfood@2x.svg" alt="logo oh my food" />    
             </div>
         </header>
         <main>
-            <div class=form>
-                <form method="post" action="#">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input class="champ" type="text" name="localisation" value="Paris, Belleville"/>
-                </form>
-            </div>
-            <div class="description">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exceptions, séléctionnés par nos soins.</p>
-                <a href="#restaurants" class="button">Explorez nos restaurants</a>
+            <div  class="main__container">
+                <div class=form>
+                    <form method="post" action="#">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input class="champ" type="text" name="localisation" value="Paris, Belleville"/>
+                    </form>
+                </div>
+                <div class="description">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>Découvrez des restaurants d'exceptions, séléctionnés par nos soins.</p>
+                    <a href="#restaurants" class="button">Explorez nos restaurants</a>
+                </div>
             </div>
             <div class="fonctionnement">
                 <h2>Fonctionnement</h2>
@@ -35,12 +40,12 @@
                 </div>
                 <div class="fonctionnement__description">
                     <p class="number">2</p>
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-list-ul"></i>
                     <p>Composez votre menu</p>
                 </div>
-                <div class="fontionnement__description">
+                <div class="fonctionnement__description--violet">
                     <p class="number">3</p>
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-store"></i>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>
