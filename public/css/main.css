@@ -1,3 +1,4 @@
+html,
 body {
   margin: 0;
   padding: 0;
@@ -16,6 +17,12 @@ h2 {
   font-family: "Roboto", sans-serif;
 }
 
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
 p {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -25,6 +32,15 @@ a {
   text-decoration: none;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+li {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  list-style-type: none;
 }
 
 header #logo_header {
@@ -94,6 +110,8 @@ header #logo_header {
   border-radius: 50px;
   color: white;
   margin-top: 35px;
+  -webkit-box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+          box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
 
 .fonctionnement {
@@ -190,4 +208,101 @@ header #logo_header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#restaurants {
+  margin: 0 20px;
+}
+
+#restaurants .restaurants a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 7px #c1c1c1;
+          box-shadow: 0 0 7px #c1c1c1;
+  margin: 20px 0px;
+}
+
+#restaurants .restaurants a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 175px;
+  border-radius: 20px 20px 0 0;
+}
+
+#restaurants .restaurants__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 75px;
+}
+
+#restaurants .restaurants__description__texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px 15px;
+  line-height: 0px;
+}
+
+#restaurants .restaurants__description__texte p {
+  font-size: 16px;
+}
+
+#restaurants .restaurants__description .far {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  padding: 25px;
+}
+
+footer {
+  background-color: #353535;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+footer #logo_footer {
+  padding: 15px 15px;
+}
+
+footer #logo_footer h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  font-size: 20px;
+}
+
+footer ul {
+  padding: 0px 15px;
+  margin: 0;
+  line-height: 25px;
+}
+
+footer ul a {
+  color: white;
+}
+
+footer ul a .fas {
+  padding: 0px 10px 0 0;
+  font-size: 10px;
 }
