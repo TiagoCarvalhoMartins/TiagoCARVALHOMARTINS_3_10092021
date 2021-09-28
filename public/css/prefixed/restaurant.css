@@ -1,0 +1,190 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #4c4c4c;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+li {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  list-style-type: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header a {
+  padding: 25px;
+  font-size: 17px;
+}
+header #logo_header {
+  padding: 15px 0 15px 25px;
+}
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  header #logo_header {
+    padding: 15px 0 15px 195px;
+  }
+}
+
+main img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 265px;
+}
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  main img {
+    width: 100%;
+  }
+}
+main .menu {
+  padding: 40px 30px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+  position: relative;
+  background-color: #f6f6f6;
+}
+main .menu .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .menu .name h1 {
+  margin: 0;
+}
+main .menu .name .far {
+  font-size: 25px;
+  padding: 5px;
+}
+main .menu__container .title .underline {
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  margin-top: -5px;
+}
+main .menu__container .block {
+  background-color: white;
+  -webkit-box-shadow: 0 0 7px #c1c1c1;
+          box-shadow: 0 0 7px #c1c1c1;
+  border-radius: 20px;
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+}
+main .menu__container .block__menu_description {
+  margin: 0 10px;
+}
+main .menu__container .block__menu_description h3 {
+  margin: 15px 0px 5px 5px;
+}
+main .menu__container .block__menu_description p {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 240px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  margin: 0 0 5px 5px;
+}
+main .menu__container .block__price {
+  margin: 35px 20px 0px 0;
+}
+main .menu__container .block__price p {
+  margin: 0;
+  font-weight: bold;
+}
+main .menu .button {
+  background: #9356dc;
+  background: -o-linear-gradient(93deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
+  background: linear-gradient(357deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
+  padding: 20px 30px;
+  margin: 45px 70px 0 70px;
+  border-radius: 50px;
+  -webkit-box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+          box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+  text-align: center;
+}
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  main .menu .button {
+    width: 20%;
+    margin-left: 250px;
+  }
+}
+main .menu .button a {
+  padding: 0 20px;
+  color: white;
+}
+
+footer {
+  background-color: #353535;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+footer #logo_footer {
+  padding: 15px 15px;
+}
+footer #logo_footer h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  font-size: 20px;
+}
+footer ul {
+  padding: 0px 15px;
+  margin: 0;
+  line-height: 25px;
+}
+footer ul a {
+  color: white;
+}
+footer ul a .fas {
+  padding: 0px 10px 0 0;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvcmVzdGF1cmFudC5zY3NzIiwiLi4vcmVzdGF1cmFudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbUJBOztFQUVDLFNBQUE7RUFDQSxVQUFBO0FDbEJEOztBRHFCQTtFQUNDLGVBQUE7RUFDQSxpQkFBQTtFQUNBLGlDQXhCWTtFQXlCWixrQkFBQTtBQ2xCRDs7QURxQkE7RUFDQyxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQ0E5Qlc7RUErQlgseUJBQUE7RUFDQSxjQUFBO0FDbEJEOztBRHFCQTtFQUNDLGVBQUE7RUFDQSxpQkFBQTtFQUNBLGlDQXRDVztFQXVDWCwwQkFBQTtLQUFBLHVCQUFBO0FDbEJEOztBRHFCQTtFQUNDLGVBQUE7RUFDQSxpQ0E1Q1c7QUMwQlo7O0FEcUJBO0VBQ0MscUJBQUE7RUFDQSxlQUFBO0VBQ0EsaUNBbERXO0VBbURYLFlBQUE7QUNsQkQ7O0FEcUJBO0VBQ0MscUJBQUE7RUFDQSxlQUFBO0VBQ0EsaUNBekRXO0VBMERYLFlBQUE7RUFDQSxxQkFBQTtBQ2xCRDs7QURxQkE7RUFDQyxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtBQ2xCRDtBRG1CQztFQUNDLGFBQUE7RUFDQSxlQUFBO0FDakJGO0FEbUJDO0VBQ0MseUJBQUE7QUNqQkY7QURqREM7RUFpRUE7SUFHRSwwQkFBQTtFQ2ZEO0FBQ0Y7O0FEb0JDO0VBQ0Msb0JBQUE7S0FBQSxpQkFBQTtFQUNBLGFBQUE7QUNqQkY7QUQzREM7RUEwRUE7SUFJRSxXQUFBO0VDZkQ7QUFDRjtBRGtCQztFQUNDLGtCQUFBO0VBQ0EsNEJBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EseUJBQUE7QUNoQkY7QURrQkU7RUFDQyxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSw4QkFBQTtBQ2hCSDtBRGlCRztFQUNDLFNBQUE7QUNmSjtBRGlCRztFQUNDLGVBQUE7RUFDQSxZQUFBO0FDZko7QURvQkk7RUFDQyxXQUFBO0VBQ0EsV0FBQTtFQUNBLHlCQS9HWTtFQWdIWixnQkFBQTtBQ2xCTDtBRHFCRztFQUNDLHVCQUFBO0VBQ0EsbUNBQUE7VUFBQSwyQkFBQTtFQUNBLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLDhCQUFBO0VBQ0EsWUFBQTtBQ25CSjtBRHFCSTtFQUNDLGNBQUE7QUNuQkw7QURvQks7RUFDQyx3QkFBQTtBQ2xCTjtBRG9CSztFQUNDLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsMEJBQUE7S0FBQSx1QkFBQTtFQUNBLG1CQUFBO0FDbEJOO0FEc0JJO0VBQ0MsdUJBQUE7QUNwQkw7QURzQks7RUFDQyxTQUFBO0VBQ0EsaUJBQUE7QUNwQk47QUR5QkU7RUFDQyxtQkFBQTtFQUNBLDZFQUFBO0VBQUEsMkVBQUE7RUFNQSxrQkFBQTtFQUNBLHdCQUFBO0VBQ0EsbUJBQUE7RUFDQSx5REFBQTtVQUFBLGlEQUFBO0VBQ0Esa0JBQUE7QUM1Qkg7QUQ5SEM7RUE4SUM7SUFjRSxVQUFBO0lBQ0Esa0JBQUE7RUMxQkY7QUFDRjtBRDRCRztFQUNDLGVBQUE7RUFDQSxZQUFBO0FDMUJKOztBRCtCQTtFQUNDLHlCQUFBO0VBQ0EsU0FBQTtFQUNBLG1CQUFBO0FDNUJEO0FEOEJDO0VBQ0Msa0JBQUE7QUM1QkY7QUQ4QkU7RUFDQyxZQUFBO0VBQ0EsaUNBckxVO0VBc0xWLFNBQUE7RUFDQSxlQUFBO0FDNUJIO0FEZ0NDO0VBQ0MsaUJBQUE7RUFDQSxTQUFBO0VBQ0EsaUJBQUE7QUM5QkY7QURnQ0U7RUFDQyxZQUFBO0FDOUJIO0FEZ0NHO0VBQ0MscUJBQUE7RUFDQSxlQUFBO0FDOUJKIiwiZmlsZSI6InJlc3RhdXJhbnQuY3NzIn0= */

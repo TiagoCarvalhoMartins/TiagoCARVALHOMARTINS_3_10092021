@@ -77,6 +77,11 @@ header #logo_header {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .main__container .description {
+    flex-direction: column;
+  }
+}
 .main__container .description h1 {
   padding: 0 80px;
 }
@@ -94,11 +99,23 @@ header #logo_header {
   margin-top: 35px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-
 .fonctionnement {
   margin: 0px 20px;
 }
-.fonctionnement__description {
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .fonctionnement__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.fonctionnement__container__description {
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
@@ -108,14 +125,19 @@ header #logo_header {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-.fonctionnement__description .fas {
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .fonctionnement__container__description {
+    width: 35%;
+  }
+}
+.fonctionnement__container__description .fas {
   padding: 15px;
   color: #7e7e7e;
 }
-.fonctionnement__description p {
+.fonctionnement__container__description p {
   font-weight: bold;
 }
-.fonctionnement__description .number {
+.fonctionnement__container__description .number {
   color: white;
   font-weight: normal;
   margin-left: -125px;
@@ -127,7 +149,12 @@ header #logo_header {
   justify-content: center;
   align-items: center;
 }
-.fonctionnement__description--violet {
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .fonctionnement__container__description .number {
+    margin-left: -80px;
+  }
+}
+.fonctionnement__container__description--violet {
   background-color: #f5edff;
   display: flex;
   justify-content: center;
@@ -137,14 +164,19 @@ header #logo_header {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-.fonctionnement__description--violet .fas {
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .fonctionnement__container__description--violet {
+    width: 35%;
+  }
+}
+.fonctionnement__container__description--violet .fas {
   padding: 15px;
   color: #9356dc;
 }
-.fonctionnement__description--violet p {
+.fonctionnement__container__description--violet p {
   font-weight: bold;
 }
-.fonctionnement__description--violet .number {
+.fonctionnement__container__description--violet .number {
   color: white;
   font-weight: normal;
   margin-left: -125px;
@@ -156,37 +188,55 @@ header #logo_header {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  .fonctionnement__container__description--violet .number {
+    margin-left: -80px;
+  }
+}
 
 #restaurants {
   margin: 0 20px;
 }
-#restaurants .restaurants a {
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  #restaurants .restaurants__container .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+#restaurants .restaurants__container .restaurants a {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 0 0 7px #c1c1c1;
   margin: 20px 0px;
 }
-#restaurants .restaurants a img {
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  #restaurants .restaurants__container .restaurants a {
+    width: 45%;
+  }
+}
+#restaurants .restaurants__container .restaurants a img {
   object-fit: cover;
   height: 175px;
   border-radius: 20px 20px 0 0;
 }
-#restaurants .restaurants__description {
+#restaurants .restaurants__container .restaurants__description {
   display: flex;
   justify-content: space-between;
   height: 75px;
 }
-#restaurants .restaurants__description__texte {
+#restaurants .restaurants__container .restaurants__description__texte {
   display: flex;
   flex-direction: column;
   margin: 5px 15px;
   line-height: 0px;
 }
-#restaurants .restaurants__description__texte p {
+#restaurants .restaurants__container .restaurants__description__texte p {
   font-size: 16px;
 }
-#restaurants .restaurants__description .far {
+#restaurants .restaurants__container .restaurants__description .far {
   display: flex;
   justify-content: center;
   align-items: center;

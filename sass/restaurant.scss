@@ -5,6 +5,18 @@ $tertiary-color: #99e2d0;
 $font-title: "Shrikhand", cursive;
 $font-main: "Roboto", sans-serif;
 
+@mixin tablet-only {
+	@media screen and (min-width: 381px) and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin pc-only {
+	@media screen and (min-width: 1025px) {
+		@content;
+	}
+}
+
 html,
 body {
 	margin: 0;
@@ -61,6 +73,9 @@ header {
 	}
 	#logo_header {
 		padding: 15px 0 15px 25px;
+		@include tablet-only {
+			padding: 15px 0 15px 195px;
+		}
 	}
 }
 
@@ -68,6 +83,9 @@ main {
 	img {
 		object-fit: cover;
 		height: 265px;
+		@include tablet-only {
+			width: 100%;
+		}
 	}
 
 	.menu {
@@ -117,6 +135,9 @@ main {
 						width: 240px;
 						text-overflow: ellipsis;
 						margin: 0 0 5px 5px;
+						@include tablet-only {
+							width: 100%;
+						}
 					}
 				}
 
@@ -142,10 +163,14 @@ main {
 			margin: 45px 70px 0 70px;
 			border-radius: 50px;
 			box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+			text-align: center;
+			@include tablet-only {
+				width: 20%;
+				margin-left: 250px;
+			}
 
 			a {
 				padding: 0 20px;
-				text-align: center;
 				color: white;
 			}
 		}

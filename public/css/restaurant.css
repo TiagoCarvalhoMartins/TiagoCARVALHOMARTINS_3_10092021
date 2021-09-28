@@ -56,10 +56,20 @@ header a {
 header #logo_header {
   padding: 15px 0 15px 25px;
 }
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  header #logo_header {
+    padding: 15px 0 15px 195px;
+  }
+}
 
 main img {
   object-fit: cover;
   height: 265px;
+}
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  main img {
+    width: 100%;
+  }
 }
 main .menu {
   padding: 40px 30px;
@@ -107,6 +117,11 @@ main .menu__container .block__menu_description p {
   text-overflow: ellipsis;
   margin: 0 0 5px 5px;
 }
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  main .menu__container .block__menu_description p {
+    width: 100%;
+  }
+}
 main .menu__container .block__price {
   margin: 35px 20px 0px 0;
 }
@@ -121,10 +136,16 @@ main .menu .button {
   margin: 45px 70px 0 70px;
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+  text-align: center;
+}
+@media screen and (min-width: 381px) and (max-width: 1024px) {
+  main .menu .button {
+    width: 20%;
+    margin-left: 250px;
+  }
 }
 main .menu .button a {
   padding: 0 20px;
-  text-align: center;
   color: white;
 }
 
