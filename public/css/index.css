@@ -77,7 +77,7 @@ header #logo_header {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .main__container .description {
     flex-direction: column;
   }
@@ -102,13 +102,13 @@ header #logo_header {
 .fonctionnement {
   margin: 0px 20px;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .fonctionnement {
     display: flex;
     flex-direction: column;
   }
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .fonctionnement__container {
     display: flex;
     flex-wrap: wrap;
@@ -125,9 +125,14 @@ header #logo_header {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .fonctionnement__container__description {
     width: 35%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__container__description {
+    width: 25%;
   }
 }
 .fonctionnement__container__description .fas {
@@ -149,9 +154,19 @@ header #logo_header {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .fonctionnement__container__description .number {
     margin-left: -80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__container__description .number {
+    margin-left: -60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .fonctionnement__container__description .number {
+    margin-left: -170px;
   }
 }
 .fonctionnement__container__description--violet {
@@ -164,9 +179,14 @@ header #logo_header {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .fonctionnement__container__description--violet {
     width: 35%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__container__description--violet {
+    width: 25%;
   }
 }
 .fonctionnement__container__description--violet .fas {
@@ -188,16 +208,26 @@ header #logo_header {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   .fonctionnement__container__description--violet .number {
     margin-left: -80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__container__description--violet .number {
+    margin-left: -60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .fonctionnement__container__description--violet .number {
+    margin-left: -170px;
   }
 }
 
 #restaurants {
   margin: 0 20px;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   #restaurants .restaurants__container .restaurants {
     display: flex;
     flex-wrap: wrap;
@@ -211,8 +241,9 @@ header #logo_header {
   border-radius: 20px;
   box-shadow: 0 0 7px #c1c1c1;
   margin: 20px 0px;
+  position: relative;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   #restaurants .restaurants__container .restaurants a {
     width: 45%;
   }
@@ -221,6 +252,15 @@ header #logo_header {
   object-fit: cover;
   height: 175px;
   border-radius: 20px 20px 0 0;
+}
+#restaurants .restaurants__container .restaurants a .new_topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: #008766;
+  background-color: #99e2d0;
+  padding: 8px 15px;
+  border-radius: 5px;
 }
 #restaurants .restaurants__container .restaurants__description {
   display: flex;

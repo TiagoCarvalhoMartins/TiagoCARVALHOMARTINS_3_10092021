@@ -6,13 +6,13 @@ $font-title: "Shrikhand", cursive;
 $font-main: "Roboto", sans-serif;
 
 @mixin tablet-only {
-	@media screen and (min-width: 381px) and (max-width: 1024px) {
+	@media screen and (min-width: 381px) {
 		@content;
 	}
 }
 
 @mixin pc-only {
-	@media screen and (min-width: 1025px) {
+	@media screen and (min-width: 1024px) {
 		@content;
 	}
 }
@@ -67,15 +67,17 @@ li {
 
 header {
 	display: flex;
+	justify-content: space-between;
+
 	a {
 		padding: 25px;
 		font-size: 17px;
 	}
 	#logo_header {
-		padding: 15px 0 15px 25px;
-		@include tablet-only {
-			padding: 15px 0 15px 195px;
-		}
+		padding-top: 15px;
+	}
+	.empty {
+		width: 30px;
 	}
 }
 
@@ -83,6 +85,7 @@ main {
 	img {
 		object-fit: cover;
 		height: 265px;
+		width: 100%;
 		@include tablet-only {
 			width: 100%;
 		}
@@ -167,6 +170,11 @@ main {
 			@include tablet-only {
 				width: 20%;
 				margin-left: 250px;
+			}
+
+			@include pc-only {
+				width: 20%;
+				margin-left: 500px;
 			}
 
 			a {

@@ -6,13 +6,19 @@ $font-title: "Shrikhand", cursive;
 $font-main: "Roboto", sans-serif;
 
 @mixin tablet-only {
-	@media screen and (min-width: 381px) and (max-width: 1024px) {
+	@media screen and (min-width: 381px) {
 		@content;
 	}
 }
 
-@mixin pc-only {
-	@media screen and (min-width: 1025px) {
+@mixin pc1024-only {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin pc1440-only {
+	@media screen and (min-width: 1440px) {
 		@content;
 	}
 }
@@ -167,6 +173,9 @@ header {
 			@include tablet-only {
 				width: 35%;
 			}
+			@include pc1024-only {
+				width: 25%;
+			}
 
 			.fas {
 				padding: 15px;
@@ -191,6 +200,12 @@ header {
 				@include tablet-only {
 					margin-left: -80px;
 				}
+				@include pc1024-only {
+					margin-left: -60px;
+				}
+				@include pc1440-only {
+					margin-left: -170px;
+				}
 			}
 
 			&--violet {
@@ -204,6 +219,9 @@ header {
 				box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 				@include tablet-only {
 					width: 35%;
+				}
+				@include pc1024-only {
+					width: 25%;
 				}
 
 				.fas {
@@ -230,6 +248,12 @@ header {
 					@include tablet-only {
 						margin-left: -80px;
 					}
+					@include pc1024-only {
+						margin-left: -60px;
+					}
+					@include pc1440-only {
+						margin-left: -170px;
+					}
 				}
 			}
 		}
@@ -253,6 +277,7 @@ header {
 				border-radius: 20px;
 				box-shadow: 0 0 7px #c1c1c1;
 				margin: 20px 0px;
+				position: relative;
 
 				@include tablet-only {
 					width: 45%;
@@ -262,6 +287,16 @@ header {
 					object-fit: cover;
 					height: 175px;
 					border-radius: 20px 20px 0 0;
+				}
+
+				.new_topright {
+					position: absolute;
+					top: 8px;
+					right: 16px;
+					color: rgb(0, 135, 102);
+					background-color: $tertiary-color;
+					padding: 8px 15px;
+					border-radius: 5px;
 				}
 			}
 

@@ -48,25 +48,25 @@ li {
 
 header {
   display: flex;
+  justify-content: space-between;
 }
 header a {
   padding: 25px;
   font-size: 17px;
 }
 header #logo_header {
-  padding: 15px 0 15px 25px;
+  padding-top: 15px;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
-  header #logo_header {
-    padding: 15px 0 15px 195px;
-  }
+header .empty {
+  width: 30px;
 }
 
 main img {
   object-fit: cover;
   height: 265px;
+  width: 100%;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   main img {
     width: 100%;
   }
@@ -117,7 +117,7 @@ main .menu__container .block__menu_description p {
   text-overflow: ellipsis;
   margin: 0 0 5px 5px;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   main .menu__container .block__menu_description p {
     width: 100%;
   }
@@ -138,10 +138,16 @@ main .menu .button {
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
   text-align: center;
 }
-@media screen and (min-width: 381px) and (max-width: 1024px) {
+@media screen and (min-width: 381px) {
   main .menu .button {
     width: 20%;
     margin-left: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .menu .button {
+    width: 20%;
+    margin-left: 500px;
   }
 }
 main .menu .button a {
