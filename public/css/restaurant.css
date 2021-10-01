@@ -147,6 +147,12 @@ main .menu .button {
 @media screen and (min-width: 1024px) {
   main .menu .button {
     width: 20%;
+    margin-left: 350px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .menu .button {
+    width: 20%;
     margin-left: 500px;
   }
 }

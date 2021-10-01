@@ -11,8 +11,14 @@ $font-main: "Roboto", sans-serif;
 	}
 }
 
-@mixin pc-only {
+@mixin pc1024-only {
 	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin pc1440-only {
+	@media screen and (min-width: 1440px) {
 		@content;
 	}
 }
@@ -172,7 +178,12 @@ main {
 				margin-left: 250px;
 			}
 
-			@include pc-only {
+			@include pc1024-only {
+				width: 20%;
+				margin-left: 350px;
+			}
+
+			@include pc1440-only {
 				width: 20%;
 				margin-left: 500px;
 			}

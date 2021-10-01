@@ -107,14 +107,13 @@ header {
 
 		.description {
 			background-color: #f6f6f6;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
+
 			text-align: center;
 			padding-top: 40px;
 			padding-bottom: 40px;
+			height: 300px;
 			@include tablet-only {
-				flex-direction: column;
+				height: 200px;
 			}
 
 			h1 {
@@ -125,6 +124,7 @@ header {
 				padding: 0 35px;
 				color: #353535;
 				margin-top: 20px;
+				margin-bottom: 70px;
 			}
 
 			.button {
@@ -164,7 +164,6 @@ header {
 		&__description {
 			background-color: #f6f6f6;
 			display: flex;
-			justify-content: center;
 			align-items: center;
 			margin: 25px 0px;
 			padding: 10px;
@@ -189,7 +188,7 @@ header {
 			.number {
 				color: white;
 				font-weight: normal;
-				margin-left: -125px;
+				margin-left: -15px;
 				height: 25px;
 				width: 25px;
 				background-color: $primary-color;
@@ -197,15 +196,6 @@ header {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				@include tablet-only {
-					margin-left: -80px;
-				}
-				@include pc1024-only {
-					margin-left: -60px;
-				}
-				@include pc1440-only {
-					margin-left: -170px;
-				}
 			}
 
 			&--violet {
