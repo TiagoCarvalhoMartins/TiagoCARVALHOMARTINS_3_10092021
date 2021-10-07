@@ -119,10 +119,12 @@ main .menu__container .container_animation {
 main .menu__container .container_animation2 {
   transform-origin: top;
   animation: menu_anim 800ms 500ms ease-in-out;
+  animation-fill-mode: both;
 }
 main .menu__container .container_animation3 {
   transform-origin: top;
   animation: menu_anim 800ms 1000ms ease-in-out;
+  animation-fill-mode: both;
 }
 main .menu__container .block {
   background-color: white;
