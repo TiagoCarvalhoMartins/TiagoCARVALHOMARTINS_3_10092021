@@ -38,6 +38,10 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	@include pc1440-only {
+		max-width: 1440px;
+		margin: auto;
+	}
 }
 
 h1 {
