@@ -1,10 +1,10 @@
 @keyframes menu_anim {
   from {
-    transform: scaleY(0);
+    transform: translate(0, 20px);
     opacity: 0;
   }
   to {
-    transform: scaleY(1);
+    transform: translate(0, 0);
     opacity: 1;
   }
 }
@@ -122,7 +122,7 @@ main .menu__container .container_animation2 {
 }
 main .menu__container .container_animation3 {
   transform-origin: top;
-  animation: menu_anim 800ms 500ms ease-in-out;
+  animation: menu_anim 800ms 1000ms ease-in-out;
 }
 main .menu__container .block {
   background-color: white;
