@@ -142,7 +142,17 @@ main {
 
 			.container_animation {
 				transform-origin: top;
-				animation: menu_anim 1000ms;
+				animation: menu_anim 800ms ease-in-out;
+			}
+
+			.container_animation2 {
+				transform-origin: top;
+				animation: menu_anim 800ms 500ms ease-in-out;
+			}
+
+			.container_animation3 {
+				transform-origin: top;
+				animation: menu_anim 800ms 500ms ease-in-out;
 			}
 			.block {
 				background-color: white;
