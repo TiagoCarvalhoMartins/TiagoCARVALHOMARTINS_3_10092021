@@ -97,7 +97,6 @@ header #logo_header {
   margin-bottom: 70px;
 }
 .main__container .description .button {
-  background: #9356dc;
   background: linear-gradient(357deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
   padding: 20px;
   border-radius: 50px;
@@ -105,6 +104,11 @@ header #logo_header {
   margin-top: 35px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
+.main__container .description .button:hover {
+  background: linear-gradient(357deg, #a16be0 5%, #ff93e1 100%, #f7f7f7 100%);
+  box-shadow: 5px 4px 30px -8px #000000;
+}
+
 .fonctionnement {
   margin: 0px 20px;
 }

@@ -132,7 +132,6 @@ header {
 			}
 
 			.button {
-				background: rgb(147, 86, 220);
 				background: linear-gradient(
 					357deg,
 					rgba(147, 86, 220, 1) 5%,
@@ -145,7 +144,14 @@ header {
 				margin-top: 35px;
 				box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 
-				@include tablet-only {
+				&:hover {
+					background: linear-gradient(
+						357deg,
+						lighten(rgba(147, 86, 220, 1), 5%) 5%,
+						lighten(rgba(255, 121, 218, 1), 5%) 100%,
+						lighten(rgba(234, 234, 234, 1), 5%) 100%
+					);
+					box-shadow: 5px 4px 30px -8px #000000;
 				}
 			}
 		}
