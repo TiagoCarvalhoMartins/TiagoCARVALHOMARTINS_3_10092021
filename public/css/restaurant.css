@@ -8,6 +8,23 @@
     opacity: 1;
   }
 }
+@keyframes checkbox-rotation {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes checkbox-translation {
+  from {
+    transform: translate(70px);
+  }
+  to {
+    transform: translate(-70px);
+    margin-left: 0px;
+  }
+}
 html,
 body {
   margin: 0;
@@ -102,9 +119,36 @@ main .menu .name {
 main .menu .name h1 {
   margin: 0;
 }
-main .menu .name .far {
+main .menu .name .heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 25px;
-  padding: 5px;
+  padding: 25px;
+  position: relative;
+}
+main .menu .name .heart .far {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 10px;
+  z-index: 0;
+}
+main .menu .name .heart .fas {
+  color: #9356dc;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 10px;
+  z-index: 1;
+  transition: opacity 250ms;
+  animation-fill-mode: forwards;
+}
+main .menu .name .heart .fas:active {
+  opacity: 1;
 }
 main .menu__container .title .underline {
   width: 40px;
@@ -134,6 +178,15 @@ main .menu__container .block {
   display: flex;
   justify-content: space-between;
   height: 70px;
+  overflow: hidden;
+}
+main .menu__container .block:active .checkbox {
+  animation: checkbox-translation 800ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+main .menu__container .block:active .checkbox__icon {
+  animation: checkbox-rotation 1000ms ease-in-out;
+  animation-fill-mode: forwards;
 }
 main .menu__container .block__menu_description {
   margin: 0 10px;
@@ -160,6 +213,24 @@ main .menu__container .block__price p {
   margin: 0;
   font-weight: bold;
 }
+main .menu__container .block .checkbox {
+  background: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin-left: 7px;
+}
+@media screen and (min-width: 381px) {
+  main .menu__container .block .checkbox {
+    margin-right: -80px;
+  }
+}
+main .menu__container .block .checkbox__icon {
+  color: white;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
 main .menu .button {
   background: #9356dc;
   background: linear-gradient(357deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
@@ -168,6 +239,10 @@ main .menu .button {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
   text-align: center;
+}
+main .menu .button:hover {
+  background: linear-gradient(357deg, #a16be0 5%, #ff93e1 100%, #f7f7f7 100%);
+  box-shadow: 5px 4px 30px -8px #000000;
 }
 @media screen and (min-width: 381px) {
   main .menu .button {

@@ -16,6 +16,25 @@ $font-main: "Roboto", sans-serif;
 	}
 }
 
+@keyframes checkbox-rotation {
+	from {
+		transform: rotate(180deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes checkbox-translation {
+	from {
+		transform: translate(70px);
+	}
+	to {
+		transform: translate(-70px);
+		margin-left: 0px;
+	}
+}
+
 @mixin tablet-only {
 	@media screen and (min-width: 381px) {
 		@content;
@@ -125,9 +144,37 @@ main {
 			h1 {
 				margin: 0;
 			}
-			.far {
+			.heart {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				font-size: 25px;
-				padding: 5px;
+				padding: 25px;
+				position: relative;
+
+				.far {
+					position: absolute;
+					top: 10px;
+					right: 0;
+					bottom: 0;
+					left: 10px;
+					z-index: 0;
+				}
+				.fas {
+					color: $primary-color;
+					opacity: 0;
+					position: absolute;
+					top: 10px;
+					right: 0;
+					bottom: 0;
+					left: 10px;
+					z-index: 1;
+					transition: opacity 250ms;
+					animation-fill-mode: forwards;
+					&:active {
+						opacity: 1;
+					}
+				}
 			}
 		}
 		&__container {
@@ -164,6 +211,16 @@ main {
 				display: flex;
 				justify-content: space-between;
 				height: 70px;
+				overflow: hidden;
+
+				&:active .checkbox {
+					animation: checkbox-translation 800ms ease-in-out;
+					animation-fill-mode: forwards;
+				}
+				&:active .checkbox__icon {
+					animation: checkbox-rotation 1000ms ease-in-out;
+					animation-fill-mode: forwards;
+				}
 
 				&__menu_description {
 					margin: 0 10px;
@@ -188,6 +245,25 @@ main {
 					p {
 						margin: 0;
 						font-weight: bold;
+					}
+				}
+
+				.checkbox {
+					background: $tertiary-color;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 30px;
+					margin-left: 7px;
+					@include tablet-only {
+						margin-right: -80px;
+					}
+
+					&__icon {
+						color: white;
+						font-size: 20px;
+						transform: rotate(180deg);
 					}
 				}
 			}

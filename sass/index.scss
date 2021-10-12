@@ -5,6 +5,17 @@ $tertiary-color: #99e2d0;
 $font-title: "Shrikhand", cursive;
 $font-main: "Roboto", sans-serif;
 
+@keyframes menu_anim {
+	from {
+		transform: translate(0, 20px);
+		opacity: 0;
+	}
+	to {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
 @mixin tablet-only {
 	@media screen and (min-width: 381px) {
 		@content;
