@@ -1,3 +1,13 @@
+@keyframes menu_anim {
+  from {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 @keyframes progress-bar {
   0% {
     transform: scaleX(0);

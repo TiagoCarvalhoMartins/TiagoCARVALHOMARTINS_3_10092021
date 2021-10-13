@@ -1,0 +1,197 @@
+main {
+	img {
+		object-fit: cover;
+		height: 265px;
+		width: 100%;
+		@include tablet-only {
+			width: 100%;
+		}
+	}
+
+	.menu {
+		padding: 40px 30px;
+		border-radius: 40px 40px 0 0;
+		margin-top: -40px;
+		position: relative;
+		background-color: rgb(246, 246, 246);
+
+		.name {
+			display: flex;
+			justify-content: space-between;
+			h1 {
+				margin: 0;
+			}
+			.heart {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 25px;
+				padding: 25px;
+				position: relative;
+
+				.far {
+					position: absolute;
+					top: 10px;
+					right: 0;
+					bottom: 0;
+					left: 10px;
+					z-index: 0;
+				}
+				.fas {
+					color: $primary-color;
+					opacity: 0;
+					position: absolute;
+					top: 10px;
+					right: 0;
+					bottom: 0;
+					left: 10px;
+					z-index: 1;
+					transition: opacity 250ms;
+					animation-fill-mode: forwards;
+					&:active {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&__container {
+			.title {
+				.underline {
+					width: 40px;
+					height: 3px;
+					background-color: $tertiary-color;
+					margin-top: -5px;
+				}
+			}
+
+			.container_animation {
+				transform-origin: top;
+				animation: menu_anim 800ms 1500ms ease-in-out;
+				animation-fill-mode: both;
+			}
+
+			.container_animation2 {
+				transform-origin: top;
+				animation: menu_anim 800ms 1500ms+500ms ease-in-out;
+				animation-fill-mode: both;
+			}
+
+			.container_animation3 {
+				transform-origin: top;
+				animation: menu_anim 800ms 1500ms+1000ms ease-in-out;
+				animation-fill-mode: both;
+			}
+			.block {
+				background-color: white;
+				box-shadow: 0 0 7px #c1c1c1;
+				border-radius: 20px;
+				margin: 15px 0;
+				display: flex;
+				justify-content: space-between;
+				height: 70px;
+				overflow: hidden;
+
+				&:active .checkbox {
+					animation: checkbox-translation 800ms ease-in-out;
+					animation-fill-mode: forwards;
+				}
+				&:active .checkbox__icon {
+					animation: checkbox-rotation 1000ms ease-in-out;
+					animation-fill-mode: forwards;
+				}
+
+				&__menu_description {
+					margin-left: 10px;
+					flex: 1;
+					&:active p {
+						animation: description_p_width 1000ms ease-in-out;
+						animation-fill-mode: forwards;
+					}
+					h3 {
+						margin: 15px 0px 5px 5px;
+					}
+					p {
+						white-space: nowrap;
+						overflow: hidden;
+						width: 240px;
+						text-overflow: ellipsis;
+						margin: 0 0 5px 5px;
+						@include tablet-only {
+							width: 100%;
+						}
+					}
+				}
+
+				&__price {
+					margin: 35px 10px 0px 0;
+					padding-right: 10px;
+
+					p {
+						margin: 0;
+						font-weight: bold;
+					}
+				}
+
+				.checkbox {
+					background: $tertiary-color;
+					margin-right: -70px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 20px;
+
+					&__icon {
+						color: white;
+						font-size: 20px;
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+		.button {
+			background: rgb(147, 86, 220);
+			background: linear-gradient(
+				357deg,
+				rgba(147, 86, 220, 1) 5%,
+				rgba(255, 121, 218, 1) 100%,
+				rgba(234, 234, 234, 1) 100%
+			);
+			padding: 20px 30px;
+			margin: 45px 70px 0 70px;
+			border-radius: 50px;
+			box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+			text-align: center;
+
+			&:hover {
+				background: linear-gradient(
+					357deg,
+					lighten(rgba(147, 86, 220, 1), 5%) 5%,
+					lighten(rgba(255, 121, 218, 1), 5%) 100%,
+					lighten(rgba(234, 234, 234, 1), 5%) 100%
+				);
+
+				box-shadow: 5px 4px 30px -8px #000000;
+			}
+
+			@include tablet-only {
+				width: 20%;
+				margin-left: 250px;
+			}
+
+			@include pc1024-only {
+				width: 20%;
+				margin-left: 350px;
+			}
+
+			@include pc1440-only {
+				width: 20%;
+				margin-left: 500px;
+			}
+
+			a {
+				padding: 0 20px;
+				color: white;
+			}
+		}
+	}
+}

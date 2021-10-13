@@ -1,0 +1,48 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	@include pc1440-only {
+		max-width: 1440px;
+		margin: auto;
+	}
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: $font-main;
+	text-align: center;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: $font-main;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: $font-main;
+}
+
+p {
+	font-size: 14px;
+	font-family: $font-main;
+}
+
+a {
+	text-decoration: none;
+	font-size: 14px;
+	font-family: $font-main;
+	color: black;
+}
+
+li {
+	text-decoration: none;
+	font-size: 14px;
+	font-family: $font-main;
+	color: black;
+	list-style-type: none;
+}

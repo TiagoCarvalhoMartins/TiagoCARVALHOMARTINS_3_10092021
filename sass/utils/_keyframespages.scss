@@ -1,0 +1,37 @@
+@keyframes menu_anim {
+	from {
+		transform: translate(0, 20px);
+		opacity: 0;
+	}
+	to {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes checkbox-rotation {
+	from {
+		transform: rotate(180deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes checkbox-translation {
+	from {
+		margin-right: -70px;
+	}
+	to {
+		margin-right: 0px;
+	}
+}
+
+@keyframes description_p_width {
+	from {
+		width: 240px;
+	}
+	to {
+		width: 200px;
+	}
+}

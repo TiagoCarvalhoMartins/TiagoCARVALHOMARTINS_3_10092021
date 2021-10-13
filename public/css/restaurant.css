@@ -1,3 +1,36 @@
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  17% {
+    transform: scaleX(0.18);
+  }
+  24% {
+    transform: scaleX(0.4);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes progress-bar--bg {
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes menu_anim {
   from {
     transform: translate(0, 20px);
@@ -18,11 +51,18 @@
 }
 @keyframes checkbox-translation {
   from {
-    transform: translate(70px);
+    margin-right: -70px;
   }
   to {
-    transform: translate(-70px);
-    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@keyframes description_p_width {
+  from {
+    width: 240px;
+  }
+  to {
+    width: 200px;
   }
 }
 html,
@@ -78,6 +118,68 @@ li {
   font-family: "Roboto", sans-serif;
   color: black;
   list-style-type: none;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  position: fixed;
+  top: 25%;
+  left: 13%;
+  z-index: 2;
+}
+@media screen and (min-width: 381px) {
+  .loader {
+    left: 30%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .loader {
+    left: 37.5%;
+  }
+}
+.loader p {
+  width: 50%;
+  opacity: 0;
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  border-radius: 50px;
+  background: linear-gradient(357deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
+  animation: progress-bar--bg 1500ms;
+  animation-fill-mode: backwards;
+}
+@media screen and (min-width: 381px) {
+  .loader {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .loader {
+    width: 25%;
+  }
+}
+.loader .progress {
+  background: rgba(223, 223, 223, 0.602);
+  border-radius: 50px;
+  opacity: 0;
+  animation: progress-bar--bg 1500ms;
+  animation-fill-mode: backwards;
+  width: 100%;
+}
+.loader .progress__bar {
+  border-radius: 50px;
+  background: #9356dc;
+  padding: 20px;
+  opacity: 0;
+  animation: progress-bar 1500ms;
+  animation-fill-mode: backwards;
+  transform-origin: left;
 }
 
 header {
@@ -158,16 +260,17 @@ main .menu__container .title .underline {
 }
 main .menu__container .container_animation {
   transform-origin: top;
-  animation: menu_anim 800ms ease-in-out;
+  animation: menu_anim 800ms 1500ms ease-in-out;
+  animation-fill-mode: both;
 }
 main .menu__container .container_animation2 {
   transform-origin: top;
-  animation: menu_anim 800ms 500ms ease-in-out;
+  animation: menu_anim 800ms 2000ms ease-in-out;
   animation-fill-mode: both;
 }
 main .menu__container .container_animation3 {
   transform-origin: top;
-  animation: menu_anim 800ms 1000ms ease-in-out;
+  animation: menu_anim 800ms 2500ms ease-in-out;
   animation-fill-mode: both;
 }
 main .menu__container .block {
@@ -189,7 +292,12 @@ main .menu__container .block:active .checkbox__icon {
   animation-fill-mode: forwards;
 }
 main .menu__container .block__menu_description {
-  margin: 0 10px;
+  margin-left: 10px;
+  flex: 1;
+}
+main .menu__container .block__menu_description:active p {
+  animation: description_p_width 1000ms ease-in-out;
+  animation-fill-mode: forwards;
 }
 main .menu__container .block__menu_description h3 {
   margin: 15px 0px 5px 5px;
@@ -207,7 +315,8 @@ main .menu__container .block__menu_description p {
   }
 }
 main .menu__container .block__price {
-  margin: 35px 20px 0px 0;
+  margin: 35px 10px 0px 0;
+  padding-right: 10px;
 }
 main .menu__container .block__price p {
   margin: 0;
@@ -215,16 +324,11 @@ main .menu__container .block__price p {
 }
 main .menu__container .block .checkbox {
   background: #99e2d0;
+  margin-right: -70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  margin-left: 7px;
-}
-@media screen and (min-width: 381px) {
-  main .menu__container .block .checkbox {
-    margin-right: -80px;
-  }
+  padding: 20px;
 }
 main .menu__container .block .checkbox__icon {
   color: white;

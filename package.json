@@ -6,7 +6,8 @@
   "scripts": {
     "sassindex": "sass --watch ./sass/index.scss:./public/css/index.css",
     "sassrestau": "sass --watch ./sass/restaurant.scss:./public/css/restaurant.css",
-    "prefix": "postcss ./public/css/index.css --use autoprefixer -d ./public/css/prefixed/"
+    "prefixindex": "postcss ./public/css/index.css --use autoprefixer -d ./public/css/prefixed/",
+    "prefixrestau": "postcss ./public/css/restaurant.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
