@@ -1,15 +1,6 @@
-@keyframes menu_anim {
-  from {
-    transform: translate(0, 20px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
 @keyframes progress-bar {
   0% {
+    z-index: 3;
     transform: scaleX(0);
     opacity: 1;
   }
@@ -28,10 +19,12 @@
   100% {
     transform: scaleX(1);
     opacity: 0;
+    z-index: -3;
   }
 }
 @keyframes progress-bar--bg {
   0% {
+    z-index: 3;
     opacity: 1;
   }
   85% {
@@ -39,6 +32,7 @@
   }
   100% {
     opacity: 0;
+    z-index: -3;
   }
 }
 html,
@@ -104,7 +98,7 @@ li {
   left: 13%;
   z-index: 2;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .loader {
     left: 30%;
   }
@@ -127,7 +121,7 @@ li {
   animation: progress-bar--bg 1500ms;
   animation-fill-mode: backwards;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .loader {
     width: 40%;
   }
@@ -187,7 +181,7 @@ header #logo_header {
   padding-bottom: 40px;
   height: 300px;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .main__container .description {
     height: 200px;
   }
@@ -208,6 +202,7 @@ header #logo_header {
   color: white;
   margin-top: 35px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+  z-index: 2;
 }
 .main__container .description .button:hover {
   background: linear-gradient(357deg, #a16be0 5%, #ff93e1 100%, #f7f7f7 100%);
@@ -217,13 +212,13 @@ header #logo_header {
 .fonctionnement {
   margin: 0px 20px;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .fonctionnement {
     display: flex;
     flex-direction: column;
   }
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .fonctionnement__container {
     display: flex;
     flex-wrap: wrap;
@@ -239,7 +234,7 @@ header #logo_header {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .fonctionnement__container__description {
     width: 35%;
   }
@@ -277,7 +272,7 @@ header #logo_header {
   border-radius: 50px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .fonctionnement__container__description--violet {
     width: 35%;
   }
@@ -310,7 +305,7 @@ header #logo_header {
 #restaurants {
   margin: 0 20px;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   #restaurants .restaurants__container .restaurants {
     display: flex;
     flex-wrap: wrap;
@@ -326,7 +321,7 @@ header #logo_header {
   margin: 20px 0px;
   position: relative;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   #restaurants .restaurants__container .restaurants .restaurants__container2 {
     width: 45%;
   }
