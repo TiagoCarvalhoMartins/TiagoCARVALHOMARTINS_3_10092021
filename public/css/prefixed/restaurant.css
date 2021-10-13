@@ -226,7 +226,7 @@ li {
   left: 13%;
   z-index: 2;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .loader {
     left: 30%;
   }
@@ -252,7 +252,7 @@ li {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .loader {
     width: 40%;
   }
@@ -311,7 +311,7 @@ main img {
   height: 265px;
   width: 100%;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   main img {
     width: 100%;
   }
@@ -457,7 +457,7 @@ main .menu__container .block__menu_description p {
      text-overflow: ellipsis;
   margin: 0 0 5px 5px;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   main .menu__container .block__menu_description p {
     width: 100%;
   }
@@ -508,7 +508,7 @@ main .menu .button:hover {
   -webkit-box-shadow: 5px 4px 30px -8px #000000;
           box-shadow: 5px 4px 30px -8px #000000;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   main .menu .button {
     width: 20%;
     margin-left: 250px;

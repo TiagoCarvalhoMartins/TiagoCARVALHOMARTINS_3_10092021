@@ -131,7 +131,7 @@ li {
   left: 13%;
   z-index: 2;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .loader {
     left: 30%;
   }
@@ -154,7 +154,7 @@ li {
   animation: progress-bar--bg 1500ms;
   animation-fill-mode: backwards;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   .loader {
     width: 40%;
   }
@@ -202,7 +202,7 @@ main img {
   height: 265px;
   width: 100%;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   main img {
     width: 100%;
   }
@@ -309,7 +309,7 @@ main .menu__container .block__menu_description p {
   text-overflow: ellipsis;
   margin: 0 0 5px 5px;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   main .menu__container .block__menu_description p {
     width: 100%;
   }
@@ -348,7 +348,7 @@ main .menu .button:hover {
   background: linear-gradient(357deg, #a16be0 5%, #ff93e1 100%, #f7f7f7 100%);
   box-shadow: 5px 4px 30px -8px #000000;
 }
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 540px) {
   main .menu .button {
     width: 20%;
     margin-left: 250px;
