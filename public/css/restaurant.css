@@ -1,0 +1,425 @@
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+    z-index: 4;
+  }
+  17% {
+    transform: scaleX(0.18);
+  }
+  24% {
+    transform: scaleX(0.4);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  85% {
+    opacity: 1;
+    z-index: 4;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+    z-index: -4;
+  }
+}
+@keyframes progress-bar--bg {
+  0% {
+    opacity: 1;
+    z-index: 4;
+  }
+  85% {
+    opacity: 1;
+    z-index: 4;
+  }
+  100% {
+    opacity: 0;
+    z-index: -4;
+  }
+}
+@keyframes index-number {
+  0% {
+    z-index: 4;
+  }
+  99% {
+    z-index: 4;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+@keyframes menu_anim {
+  from {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes checkbox-rotation {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes checkbox-translation {
+  from {
+    margin-right: -70px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+@keyframes description_p_width {
+  from {
+    width: 240px;
+  }
+  to {
+    width: 200px;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+@media screen and (min-width: 1440px) {
+  html,
+body {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #4c4c4c;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-overflow: ellipsis;
+}
+
+p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+li {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  list-style-type: none;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  position: fixed;
+  top: 25%;
+  left: 13%;
+  z-index: 4;
+  animation: index-number 1500ms;
+  animation-fill-mode: forwards;
+}
+@media screen and (min-width: 540px) {
+  .loader {
+    left: 30%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .loader {
+    left: 37.5%;
+  }
+}
+.loader p {
+  width: 50%;
+  opacity: 0;
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  border-radius: 50px;
+  background: linear-gradient(357deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
+  animation: progress-bar--bg 1500ms;
+  animation-fill-mode: backwards;
+}
+@media screen and (min-width: 540px) {
+  .loader {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .loader {
+    width: 25%;
+  }
+}
+.loader .progress {
+  background: rgba(223, 223, 223, 0.602);
+  opacity: 0;
+  animation: progress-bar--bg 1500ms;
+  animation-fill-mode: backwards;
+  width: 100%;
+}
+.loader .progress__bar {
+  background: #9356dc;
+  padding: 18px;
+  opacity: 0;
+  animation: progress-bar 1500ms;
+  animation-fill-mode: backwards;
+  transform-origin: left;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header a {
+  padding: 25px;
+  font-size: 17px;
+}
+header #logo_header {
+  padding-top: 15px;
+}
+header .empty {
+  width: 64px;
+}
+
+main img {
+  object-fit: cover;
+  height: 265px;
+  width: 100%;
+}
+@media screen and (min-width: 540px) {
+  main img {
+    width: 100%;
+  }
+}
+main .menu {
+  padding: 40px 30px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+  position: relative;
+  background-color: #f6f6f6;
+  z-index: 0;
+}
+main .menu .name {
+  display: flex;
+  justify-content: space-between;
+}
+main .menu .name h1 {
+  margin: 0;
+}
+main .menu .name .heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 25px;
+  position: relative;
+}
+main .menu .name .heart .far {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 10px;
+  z-index: 0;
+}
+main .menu .name .heart .fas {
+  color: #9356dc;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 10px;
+  z-index: 1;
+  transition: opacity 250ms;
+  animation-fill-mode: forwards;
+}
+main .menu .name .heart .fas:active {
+  opacity: 1;
+}
+main .menu__container .title .underline {
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  margin-top: -5px;
+}
+main .menu__container .container_animation {
+  transform-origin: top;
+  animation: menu_anim 800ms 1500ms ease-in-out;
+  animation-fill-mode: both;
+}
+main .menu__container .container_animation2 {
+  transform-origin: top;
+  animation: menu_anim 800ms 2000ms ease-in-out;
+  animation-fill-mode: both;
+}
+main .menu__container .container_animation3 {
+  transform-origin: top;
+  animation: menu_anim 800ms 2500ms ease-in-out;
+  animation-fill-mode: both;
+}
+main .menu__container .block {
+  background-color: white;
+  box-shadow: 0 0 7px #c1c1c1;
+  border-radius: 20px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  overflow: hidden;
+}
+main .menu__container .block:active .checkbox {
+  animation: checkbox-translation 800ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+main .menu__container .block:active .checkbox__icon {
+  animation: checkbox-rotation 1000ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+main .menu__container .block__menu_description {
+  margin-left: 10px;
+  flex: 1;
+}
+main .menu__container .block__menu_description:active p {
+  animation: description_p_width 1000ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+@media screen and (min-width: 540px) {
+  main .menu__container .block__menu_description:active p {
+    animation: none;
+  }
+}
+main .menu__container .block__menu_description h3 {
+  margin: 15px 0px 5px 5px;
+}
+main .menu__container .block__menu_description p {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 240px;
+  text-overflow: ellipsis;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 540px) {
+  main .menu__container .block__menu_description p {
+    width: 100%;
+  }
+}
+main .menu__container .block__price {
+  margin: 35px 10px 0px 0;
+  padding-right: 10px;
+}
+main .menu__container .block__price p {
+  margin: 0;
+  font-weight: bold;
+}
+main .menu__container .block .checkbox {
+  background: #99e2d0;
+  margin-right: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+main .menu__container .block .checkbox__icon {
+  color: white;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
+main .menu .button {
+  background: #9356dc;
+  background: linear-gradient(357deg, #9356dc 5%, #ff79da 100%, #eaeaea 100%);
+  padding: 20px 30px;
+  margin: 45px 70px 0 70px;
+  border-radius: 50px;
+  box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
+  text-align: center;
+}
+main .menu .button:hover {
+  background: linear-gradient(357deg, #a16be0 5%, #ff93e1 100%, #f7f7f7 100%);
+  box-shadow: 5px 4px 30px -8px #000000;
+}
+@media screen and (min-width: 540px) {
+  main .menu .button {
+    width: 20%;
+    margin-left: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .menu .button {
+    width: 20%;
+    margin-left: 350px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .menu .button {
+    width: 20%;
+    margin-left: 500px;
+  }
+}
+main .menu .button a {
+  padding: 0 20px;
+  color: white;
+}
+
+footer {
+  background-color: #353535;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+footer #logo_footer {
+  padding: 15px 15px;
+}
+footer #logo_footer h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  font-size: 20px;
+}
+footer ul {
+  padding: 0px 15px;
+  margin: 0;
+  line-height: 25px;
+}
+footer ul a {
+  color: white;
+}
+footer ul a .fas {
+  padding: 0px 10px 0 0;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=restaurant.css.map */
