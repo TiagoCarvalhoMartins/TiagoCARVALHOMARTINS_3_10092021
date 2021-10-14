@@ -38,3 +38,16 @@
 		z-index: -4;
 	}
 }
+@keyframes index-number {
+	0% {
+		z-index: 4;
+	}
+
+	99% {
+		z-index: 4;
+	}
+
+	100% {
+		z-index: -1;
+	}
+}

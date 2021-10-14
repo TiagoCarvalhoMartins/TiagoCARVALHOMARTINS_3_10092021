@@ -8,6 +8,8 @@
 	top: 25%;
 	left: 13%;
 	z-index: -1;
+	animation: index-number 1500ms;
+	animation-fill-mode: forwards;
 
 	@include tablet-only {
 		left: 30%;
