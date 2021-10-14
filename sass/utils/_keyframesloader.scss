@@ -2,7 +2,10 @@
 	0% {
 		transform: scaleX(0);
 		opacity: 1;
+<<<<<<< HEAD
 		z-index: 4;
+=======
+>>>>>>> parent of b6bb235 (Correction of index.scss)
 	}
 	17% {
 		transform: scaleX(0.18);
@@ -15,19 +18,28 @@
 	}
 	85% {
 		opacity: 1;
+<<<<<<< HEAD
 		z-index: 4;
+=======
+>>>>>>> parent of b6bb235 (Correction of index.scss)
 	}
 	100% {
 		transform: scaleX(1);
 		opacity: 0;
+<<<<<<< HEAD
 		z-index: -4;
+=======
+>>>>>>> parent of b6bb235 (Correction of index.scss)
 	}
 }
 
 @keyframes progress-bar--bg {
 	0% {
 		opacity: 1;
+<<<<<<< HEAD
 		z-index: 4;
+=======
+>>>>>>> parent of b6bb235 (Correction of index.scss)
 	}
 	85% {
 		opacity: 1;
@@ -35,6 +47,9 @@
 	}
 	100% {
 		opacity: 0;
+<<<<<<< HEAD
 		z-index: -4;
+=======
+>>>>>>> parent of b6bb235 (Correction of index.scss)
 	}
 }
