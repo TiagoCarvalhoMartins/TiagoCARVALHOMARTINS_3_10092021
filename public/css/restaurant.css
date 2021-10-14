@@ -2,6 +2,7 @@
   0% {
     transform: scaleX(0);
     opacity: 1;
+    z-index: 4;
   }
   17% {
     transform: scaleX(0.18);
@@ -14,21 +15,26 @@
   }
   85% {
     opacity: 1;
+    z-index: 4;
   }
   100% {
     transform: scaleX(1);
     opacity: 0;
+    z-index: -4;
   }
 }
 @keyframes progress-bar--bg {
   0% {
     opacity: 1;
+    z-index: 4;
   }
   85% {
     opacity: 1;
+    z-index: 4;
   }
   100% {
     opacity: 0;
+    z-index: -4;
   }
 }
 @keyframes menu_anim {
@@ -69,6 +75,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  z-index: 0;
 }
 @media screen and (min-width: 1440px) {
   html,
@@ -129,7 +136,7 @@ li {
   position: fixed;
   top: 25%;
   left: 13%;
-  z-index: 2;
+  z-index: -1;
 }
 @media screen and (min-width: 540px) {
   .loader {
@@ -166,16 +173,14 @@ li {
 }
 .loader .progress {
   background: rgba(223, 223, 223, 0.602);
-  border-radius: 50px;
   opacity: 0;
   animation: progress-bar--bg 1500ms;
   animation-fill-mode: backwards;
   width: 100%;
 }
 .loader .progress__bar {
-  border-radius: 50px;
   background: #9356dc;
-  padding: 20px;
+  padding: 18px;
   opacity: 0;
   animation: progress-bar 1500ms;
   animation-fill-mode: backwards;
@@ -213,6 +218,7 @@ main .menu {
   margin-top: -40px;
   position: relative;
   background-color: #f6f6f6;
+  z-index: 0;
 }
 main .menu .name {
   display: flex;
@@ -298,6 +304,11 @@ main .menu__container .block__menu_description {
 main .menu__container .block__menu_description:active p {
   animation: description_p_width 1000ms ease-in-out;
   animation-fill-mode: forwards;
+}
+@media screen and (min-width: 540px) {
+  main .menu__container .block__menu_description:active p {
+    animation: none;
+  }
 }
 main .menu__container .block__menu_description h3 {
   margin: 15px 0px 5px 5px;

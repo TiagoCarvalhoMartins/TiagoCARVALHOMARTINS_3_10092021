@@ -7,11 +7,11 @@
 	position: fixed;
 	top: 25%;
 	left: 13%;
-	z-index: 0;
+	z-index: -1;
 	@include tablet-only {
 		left: 30%;
 	}
-	@include pc1440-only() {
+	@include pc1440-only {
 		left: 37.5%;
 	}
 	p {
@@ -40,15 +40,13 @@
 	}
 	.progress {
 		background: rgba(223, 223, 223, 0.602);
-		border-radius: 50px;
 		opacity: 0;
 		animation: progress-bar--bg 1500ms;
 		animation-fill-mode: backwards;
 		width: 100%;
 		&__bar {
-			border-radius: 50px;
 			background: $primary-color;
-			padding: 20px;
+			padding: 18px;
 			opacity: 0;
 			animation: progress-bar 1500ms;
 			animation-fill-mode: backwards;

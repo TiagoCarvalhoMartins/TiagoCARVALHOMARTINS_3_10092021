@@ -2,7 +2,7 @@
   0% {
     transform: scaleX(0);
     opacity: 1;
-    z-index: 3;
+    z-index: 4;
   }
   17% {
     transform: scaleX(0.18);
@@ -15,31 +15,33 @@
   }
   85% {
     opacity: 1;
-    z-index: 3;
+    z-index: 4;
   }
   100% {
     transform: scaleX(1);
     opacity: 0;
-    z-index: 0;
+    z-index: -4;
   }
 }
 @keyframes progress-bar--bg {
   0% {
     opacity: 1;
-    z-index: 3;
+    z-index: 4;
   }
   85% {
     opacity: 1;
+    z-index: 4;
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -4;
   }
 }
 html,
 body {
   margin: 0;
   padding: 0;
+  z-index: 0;
 }
 @media screen and (min-width: 1440px) {
   html,
@@ -97,7 +99,7 @@ li {
   position: fixed;
   top: 25%;
   left: 13%;
-  z-index: 0;
+  z-index: -1;
 }
 @media screen and (min-width: 540px) {
   .loader {
@@ -134,16 +136,14 @@ li {
 }
 .loader .progress {
   background: rgba(223, 223, 223, 0.602);
-  border-radius: 50px;
   opacity: 0;
   animation: progress-bar--bg 1500ms;
   animation-fill-mode: backwards;
   width: 100%;
 }
 .loader .progress__bar {
-  border-radius: 50px;
   background: #9356dc;
-  padding: 20px;
+  padding: 18px;
   opacity: 0;
   animation: progress-bar 1500ms;
   animation-fill-mode: backwards;
@@ -203,7 +203,7 @@ header #logo_header {
   color: white;
   margin-top: 35px;
   box-shadow: 5px 4px 17px -8px rgba(0, 0, 0, 0.77);
-  z-index: 3;
+  z-index: 2;
 }
 .main__container .description .button:hover {
   background: linear-gradient(357deg, #a16be0 5%, #ff93e1 100%, #f7f7f7 100%);
