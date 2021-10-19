@@ -224,7 +224,13 @@
 						z-index: -1;
 					}
 					.fas {
-						color: $primary-color;
+						background: linear-gradient(
+							360deg,
+							rgba(147, 86, 220, 1) 58%,
+							rgba(255, 121, 218, 1) 100%
+						);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
 						opacity: 0;
 						position: absolute;
 						top: 25px;
@@ -234,6 +240,7 @@
 						z-index: 1;
 						transition: opacity 250ms;
 						animation-fill-mode: forwards;
+
 						&:active {
 							opacity: 1;
 						}

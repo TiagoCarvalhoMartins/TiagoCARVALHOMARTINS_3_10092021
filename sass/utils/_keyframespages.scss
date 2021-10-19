@@ -18,6 +18,15 @@
 	}
 }
 
+@keyframes checkbox-rotation-reverse {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(180deg);
+	}
+}
+
 @keyframes checkbox-translation {
 	from {
 		margin-right: -70px;
@@ -27,11 +36,28 @@
 	}
 }
 
+@keyframes checkbox-translation-reverse {
+	from {
+		margin-right: 0px;
+	}
+	to {
+		margin-right: -70px;
+	}
+}
+
 @keyframes description_p_width {
 	from {
 		width: 240px;
 	}
 	to {
 		width: 200px;
+	}
+}
+@keyframes description_p_width-reverse {
+	from {
+		width: 200px;
+	}
+	to {
+		width: 240px;
 	}
 }
