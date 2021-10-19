@@ -73,19 +73,19 @@ main {
 
 			.container_animation {
 				transform-origin: top;
-				animation: menu_anim 800ms ease-in-out;
+				animation: menu_anim 800ms 1000ms ease-in-out;
 				animation-fill-mode: both;
 			}
 
 			.container_animation2 {
 				transform-origin: top;
-				animation: menu_anim 800ms 500ms ease-in-out;
+				animation: menu_anim 800ms 1000ms+500ms ease-in-out;
 				animation-fill-mode: both;
 			}
 
 			.container_animation3 {
 				transform-origin: top;
-				animation: menu_anim 800ms 1000ms ease-in-out;
+				animation: menu_anim 800ms 1000ms+1000ms ease-in-out;
 				animation-fill-mode: both;
 			}
 			.block {
@@ -100,7 +100,7 @@ main {
 
 				&:active .checkbox {
 					animation: checkbox-translation 800ms ease-in-out;
-					animation-fill-mode: forwards;
+					animation-fill-mode: both;
 				}
 
 				&:not(:active) .checkbox {
